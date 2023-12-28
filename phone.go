@@ -425,6 +425,7 @@ type DialOptions struct {
 // return DialResponseError in case non 200 responses
 func (p *Phone) Dial(dialCtx context.Context, recipient sip.Uri, o DialOptions) (*DialogClientSession, error) {
 	// ip := p.ua.GetIP()
+	fmt.Printf("Dialing %s\n", recipient.String())
 	ctx, _ := context.WithCancel(dialCtx)
 	// defer cancel()
 
